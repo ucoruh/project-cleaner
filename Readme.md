@@ -4,11 +4,11 @@
 
 
 
-<img title="" src="file:///C:/Users/ugur.coruh/Desktop/project-cleaner/assets/bd83635cca6588ea4c19c3ac3b63da0c9424e4cd.png" alt="app.png" width="243" data-align="center">
+<img title="" src="assets/bd83635cca6588ea4c19c3ac3b63da0c9424e4cd.png" alt="app.png" width="243" data-align="center">
 
 ## Usage
 
-![](C:\Users\ugur.coruh\Desktop\project-cleaner\assets\2022-01-03-02-04-08-image.png)
+![](assets/2022-01-03-02-04-08-image.png)
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-![](C:\Users\ugur.coruh\Desktop\project-cleaner\assets\2022-01-03-02-08-23-image.png)
+![](assets/2022-01-03-02-08-23-image.png)
 
  
 
