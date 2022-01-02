@@ -7,24 +7,20 @@ on:
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
   #pull_request:
-    #branches: [ main ]
+  #branches: [ main ]
   
 jobs:
   build:
     name: Create Release
     runs-on: windows-latest
-
     steps:
-     - uses: actions/checkout@master
-     # - uses: actions/checkout@v2
-
+     # - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
-
     - name: MSBuild
       working-directory: ProjectCleanerSetup
       run: msbuild ProjectCleanerSetup.wixproj
-
     - name: Zip App
       run: zip -r ProjectCleanerSetup.zip ProjectCleanerSetup\bin\Release\ProjectCleanerSetup.msi
       
