@@ -38,8 +38,11 @@ jobs:
     - name: Build Solution
       run: msbuild ProjectCleaner.sln /p:Configuration=Release
       
-    - name: Build Solution
+    - name: Build Cleaner Project
       run: msbuild ProjectCleaner\ProjectCleaner.csproj /p:Configuration=Release
+      
+    - name: Build Wix Cleaner Setup Project
+      run: msbuild ProjectCleanerSetup\ProjectCleanerSetup.wixproj /p:Configuration=Release
       
    # - name: Build Wix Setup
    #   run: |
