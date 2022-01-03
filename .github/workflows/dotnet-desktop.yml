@@ -37,7 +37,7 @@ jobs:
       
     - name: Build Wix Setup
       run: |
-        wix\tools\candle.exe Product.wxs -o obj\ -ext WixUtilExtension -ext WixUIExtension
+        wix\tools\candle.exe .\ProjectCleanerSetup\Product.wxs -o obj\ -ext WixUtilExtension -ext WixUIExtension
         wix\tools\light.exe obj\*.wixobj -o bin\Installer.msi -ext WixUtilExtension -ext WixUIExtension -dWixUILicenseRtf="License.rtf"
         
     - name: Create Release
