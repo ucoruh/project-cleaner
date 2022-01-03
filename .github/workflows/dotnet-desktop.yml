@@ -36,17 +36,13 @@
 # For a complete CI/CD sample to get started with GitHub Action workflows for Desktop Applications,
 # refer to https://github.com/microsoft/github-actions-for-desktop-apps
 
-name: Create .NET Core Desktop Release
+name: Create .NET Desktop Release
 
 on:
   push:
-    #branches: [ main ]
     # Sequence of patterns matched against refs/tags
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-  #pull_request:
-  #branches: [ main ]
-
 jobs:
 
   build:
@@ -100,6 +96,6 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./ProjectCleanerSetup/bin/Release/ProjectCleanerSetup.msi
+        asset_path: D:\a\project-cleaner\project-cleaner\ProjectCleanerSetup\bin\Release\ProjectCleanerSetup.msi
         asset_name: ProjectCleanerSetup.windows.msi
         asset_content_type: application/zip
