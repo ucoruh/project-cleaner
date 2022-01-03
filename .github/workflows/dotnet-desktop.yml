@@ -37,7 +37,7 @@ jobs:
       
     - name: Build Wix Setup
       run: |
-        wix\tools\candle.exe .\ProjectCleanerSetup\Product.wxs -dSolutionExt=.sln -dSolutionFileName=ProjectCleaner.sln  -dSolutionName=ProjectCleaner  -dSolutionPath=.\ProjectCleaner.sln  -dConfiguration=Release  -dOutDir=bin\Release\  -dPlatform=x86  -dProjectDir=.\ProjectCleanerSetup\  -dProjectExt=.wixproj  -dProjectFileName=ProjectCleanerSetup.wixproj  -dProjectName=ProjectCleanerSetup  -dProjectPath=.\ProjectCleanerSetup\ProjectCleanerSetup.wixproj  -dTargetDir=.\ProjectCleanerSetup\bin\Release\  -dTargetExt=.msi  -dTargetFileName=ProjectCleanerSetup.msi  -dTargetName=ProjectCleanerSetup  -dTargetPath=.\ProjectCleanerSetup\bin\Release\ProjectCleanerSetup.msi -out obj\Release\ -arch x86
+        wix\tools\candle.exe .\ProjectCleanerSetup\Product.wxs -dSolutionPath=.\ProjectCleaner.sln  -dConfiguration=Release  -dOutDir=bin\Release\  -dPlatform=x86  -dProjectDir=.\ProjectCleanerSetup\  -dProjectExt=.wixproj  -dProjectFileName=ProjectCleanerSetup.wixproj  -dProjectName=ProjectCleanerSetup  -dProjectPath=.\ProjectCleanerSetup\ProjectCleanerSetup.wixproj  -dTargetDir=.\ProjectCleanerSetup\bin\Release\  -dTargetExt=.msi  -dTargetFileName=ProjectCleanerSetup.msi  -dTargetName=ProjectCleanerSetup  -dTargetPath=.\ProjectCleanerSetup\bin\Release\ProjectCleanerSetup.msi -out obj\Release\ -arch x86
         wix\tools\light.exe .\ProjectCleanerSetup\obj\*.wixobj -o .\ProjectCleanerSetup\bin\Installer.msi -ext WixUtilExtension -ext WixUIExtension -dWixUILicenseRtf="License.rtf"
         
     - name: Create Release
