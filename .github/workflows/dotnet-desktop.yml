@@ -56,8 +56,8 @@ jobs:
         release_name: 1.0.${{ github.run_number }}
         draft: false
         prerelease: false
-    - name: Upload Installer
-      id: upload-release-asset 
+    - name: Upload Tagged Installer
+      id: upload-tagged-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -66,4 +66,16 @@ jobs:
         asset_path: ProjectCleanerSetup\bin\Release\ProjectCleanerSetup.msi
         asset_name: Installer_v1.0.${{ github.run_number }}.msi
         asset_content_type: application/x-msi
+        
+    - name: Upload Latest Installer
+      id: upload-latest-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ProjectCleanerSetup\bin\Release\ProjectCleanerSetup.msi
+        asset_name: project_cleaner_latest.msi
+        asset_content_type: application/x-msi
+        
         
