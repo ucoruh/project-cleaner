@@ -8,6 +8,6 @@ using System.Runtime.InteropServices;
 [assembly:AssemblyCulture                ("")]
 [assembly:AssemblyConfiguration          ("RELEASE")]
 
-[assembly:AssemblyVersion                ("0.0.0.32")]
-[assembly:AssemblyFileVersion            ("0.0.0.32")]
-[assembly:AssemblyInformationalVersion   ("0.0.0.32, Hash 603d9b1, BuildConfig RELEASE, HasLocalChange True")]
+[assembly:AssemblyVersion                ("0.0.0.36")]
+[assembly:AssemblyFileVersion            ("0.0.0.36")]
+[assembly:AssemblyInformationalVersion   ("0.0.0.36, Hash c7c9b86, BuildConfig RELEASE, HasLocalChange True")]

@@ -1,6 +1,6 @@
-#define VERSION_COMA   0,0,0,32
-#define VERSION        "0.0.0.32"
-#define FULL_VERSION   "0.0.0.32, Hash 603d9b1, BuildConfig RELEASE, HasLocalChange True"
+#define VERSION_COMA   0,0,0,36
+#define VERSION        "0.0.0.36"
+#define FULL_VERSION   "0.0.0.36, Hash c7c9b86, BuildConfig RELEASE, HasLocalChange True"
 #define COMPANY        "ucoruh"
 #define PRODUCT        "Project Cleaner"
 #define COPYRIGHT      "Copyright ©  2021 Uğur CORUH"
