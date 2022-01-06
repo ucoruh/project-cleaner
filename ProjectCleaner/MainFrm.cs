@@ -562,7 +562,7 @@ namespace ucoruh
             string[] folders = (string[])e.Data.GetData(DataFormats.FileDrop);
 
             bool allDirectory = true;
-            // Make sure only PDFs are dropped
+            // Make sure only dropped item is directory
             foreach (string s in folders)
             {
                 // get the file attributes for file or directory
@@ -684,6 +684,21 @@ namespace ucoruh
             txtLog.ResetText();
 
             configureControlEnability();
+
+        }
+
+        private void btnRunCleaner_MouseEnter(object sender, EventArgs e)
+        {
+            btnRunCleaner.BackColor = Color.Green;
+        }
+
+        private void btnRunCleaner_MouseLeave(object sender, EventArgs e)
+        {
+            btnRunCleaner.BackColor = Color.Lime;
+        }
+
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
 
         }
     }

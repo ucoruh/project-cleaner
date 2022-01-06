@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnMoveDown = new System.Windows.Forms.Button();
@@ -62,7 +63,7 @@
             this.btnRemove.BackColor = System.Drawing.SystemColors.Control;
             this.btnRemove.Enabled = false;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(771, 139);
+            this.btnRemove.Location = new System.Drawing.Point(771, 131);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(156, 29);
             this.btnRemove.TabIndex = 12;
@@ -75,7 +76,7 @@
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(771, 102);
+            this.btnAdd.Location = new System.Drawing.Point(771, 94);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(156, 29);
             this.btnAdd.TabIndex = 11;
@@ -89,7 +90,7 @@
             this.btnMoveDown.BackColor = System.Drawing.SystemColors.Control;
             this.btnMoveDown.Enabled = false;
             this.btnMoveDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoveDown.Location = new System.Drawing.Point(771, 65);
+            this.btnMoveDown.Location = new System.Drawing.Point(771, 57);
             this.btnMoveDown.Name = "btnMoveDown";
             this.btnMoveDown.Size = new System.Drawing.Size(156, 29);
             this.btnMoveDown.TabIndex = 10;
@@ -104,7 +105,7 @@
             this.btnMoveUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMoveUp.Enabled = false;
             this.btnMoveUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoveUp.Location = new System.Drawing.Point(771, 28);
+            this.btnMoveUp.Location = new System.Drawing.Point(771, 20);
             this.btnMoveUp.Name = "btnMoveUp";
             this.btnMoveUp.Size = new System.Drawing.Size(156, 29);
             this.btnMoveUp.TabIndex = 9;
@@ -126,6 +127,8 @@
             this.btnRunCleaner.Text = "Run Cleaner";
             this.btnRunCleaner.UseVisualStyleBackColor = false;
             this.btnRunCleaner.Click += new System.EventHandler(this.btnCleanProjects_Click);
+            this.btnRunCleaner.MouseEnter += new System.EventHandler(this.btnRunCleaner_MouseEnter);
+            this.btnRunCleaner.MouseLeave += new System.EventHandler(this.btnRunCleaner_MouseLeave);
             // 
             // listboxSearchFolders
             // 
@@ -332,6 +335,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(942, 607);
+            this.Controls.Add(this.btnMoveUp);
             this.Controls.Add(this.btnCleanForm);
             this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.btnOpenToptal);
@@ -346,11 +350,13 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnMoveDown);
-            this.Controls.Add(this.btnMoveUp);
             this.Controls.Add(this.btnRunCleaner);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project Cleaner";
+            this.Load += new System.EventHandler(this.MainFrm_Load);
             this.groupBox1.ResumeLayout(false);
             this.statusStripMain.ResumeLayout(false);
             this.statusStripMain.PerformLayout();

@@ -15,11 +15,11 @@
 
     <Media Id="1" Cabinet="projectcleaner.cab" EmbedCab="yes" />
 
-    <Binary Id="ADFMergerBanner" SourceFile="$(var.ProjectDir)img\banner.bmp" />
+    <Binary Id="ProjectCleanerBanner" SourceFile="$(var.ProjectDir)img\banner.bmp" />
     <WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)img\banner.bmp" />
     <WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)img\app_bg.bmp" />
     <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)res\Readme.rtf" />
-    <Icon Id="carteklogo.ico" SourceFile="$(var.ProjectDir)img\app.ico" />
+    <Icon Id="applogo.ico" SourceFile="$(var.ProjectDir)img\app.ico" />
     <Property Id="ARPPRODUCTICON" Value="app.ico" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
     
@@ -59,6 +59,7 @@
     </ComponentGroup>
   
   </Fragment>
+  
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="WINDOWSVOLUME">
