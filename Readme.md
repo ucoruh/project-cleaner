@@ -1,6 +1,6 @@
 # Project Cleaner
 
-# .gitignore based folder cleaner
+# .gitignore based folder cleaner more than 'git clean -dfX'
 
 <img title="" src="assets/bd83635cca6588ea4c19c3ac3b63da0c9424e4cd.png" alt="app.png" width="243" data-align="center">
 
